@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet"
+          asp-href-include="/lib/*.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>GuitarLand</title>
+</head>
+<body>
+
+    <div class="navbar title-bar" role="navigation">
+        <a class="col navbar-brand" href="#">Guitar Land</a>
+        <div class="col-4 text-right" id="cart">            
+            @await Component.InvokeAsync("CartSummary")
+        </div>
+    </div>
+    <div class="row m-1 p-1">
+        <div id="navigation" class="col-3">
+            Placeholder Text          
+        </div>
+        <div class="col-9">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

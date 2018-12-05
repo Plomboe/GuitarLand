@@ -1,0 +1,12 @@
+﻿@model Product
+<h3>@Model.Name</h3>
+<h5>@Model.Description</h5>
+<script>var cart = document.getElementById("cart"); cart.style.visibility = 'hidden';</script>
+<table>
+    <tr><td class="font-weight-bold">Price:</td><td>@Model.Price.ToString("c")</td></tr>
+    <tr><td class="font-weight-bold">Guitar Type:</td><td>@Model.GuitarType</td></tr>
+    <tr><td class="font-weight-bold">Body Material:</td><td>@Model.BodyMaterial</td></tr>
+    <tr><td class="font-weight-bold">Pickups:</td><td>@Model.Pickups</td></tr>
+</table>
+<br />
+<a class="btn btn-primary" asp-action="List">Back to shopping</a>
